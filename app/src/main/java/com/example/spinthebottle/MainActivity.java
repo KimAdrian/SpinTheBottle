@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void spinbottle() {
         if (!spinning) {
-            int newDir = random.nextInt(2000);
+            int newDir = random.nextInt(1800);
             float X = bottle.getWidth() / 2;
             float Y = bottle.getHeight() / 2;
 
