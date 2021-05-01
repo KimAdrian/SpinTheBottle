@@ -16,7 +16,7 @@
         android:layout_marginEnd="69dp"
         android:layout_marginBottom="63dp"
         android:fontFamily="@font/bungee_shade"
-        android:text="@string/click_to_spin"
+        android:text="@string/tap_to_spin"
         android:textAlignment="center"
         android:textColor="#ffff"
         android:textSize="40sp"
@@ -28,5 +28,16 @@
         android:layout_height="300dp"
         android:layout_centerInParent="true"
         android:src="@drawable/bottle"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
