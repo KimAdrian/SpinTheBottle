@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Spin The Bottle</string>
     <string name="spin_the_bottle">Spin the bottle</string>
-    <string name="tap_to_spin">Tap to spin</string>
+    <string name="tap_to_spin">Tap the bottle to spin</string>
 </resources>

@@ -1,25 +1,18 @@
 package com.example.spinthebottle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     ImageView bottle;
-    private Random random = new Random();
+    private final Random random = new Random();
     private int lastDir;
     private boolean spinning;
     AdView adView;
@@ -30,19 +23,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Initialize ad id
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
+        MobileAds.initialize(this, initializationStatus -> {
         });
 
         bottle = findViewById(R.id.bottle);
-        bottle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinbottle();
-            }
-        });
+        bottle.setOnClickListener(v -> spinbottle());
 
         adView = findViewById(R.id.adView);
         //Test Id
